@@ -11,4 +11,9 @@ Esta API proporciona funcionalidades para administrar productos de una tienda de
 #### Obtener Todos los Productos
 - **Descripción**: Obtiene todos los productos.
 - **Método**: GET
-- **Endpoint**: `http://localhost/archivos/tpe/TPE-WEB2-API/api/productos`
+- **Endpoint**: `http://localhost/TPE-WEB2-API/api/productos`
+
+#### Obtener Producto por ID
+- **Descripción**: Obtiene un producto por su ID.
+- **Método**: GET
+- **Endpoint**: `http://localhost/TPE-WEB2-API/api/productos/{id}`

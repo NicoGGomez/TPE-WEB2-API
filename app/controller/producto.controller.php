@@ -30,4 +30,14 @@ class productController {
         }
     }
 
+    function productoById($params = null){
+        $id_producto = $params[':id'];
+        $producto = $this->productModel->productoById($id_producto);
+        if($producto){
+            $this->viewApi->response($producto, 200);
+        } else {
+            $this->viewApi->response("El producto con el id " . $id_producto . " no existe", 404);
+        }
+    }
+
 }

@@ -15,25 +15,22 @@ class Route {
         $this->params = [];
     }
 
-    function match($url, $verb){
+    public function match($url, $verb) {
         if($this->verb != $verb){
             return false;
         }
-
-        $partsURL = explode("/", trim($url, '/'));
-        $partsRoute = explode("/", trim($this->url, '/'));
+        $partsURL = explode("/", trim($url,'/'));
+        $partsRoute = explode("/", trim($this->url,'/'));
         if(count($partsRoute) != count($partsURL)){
             return false;
         }
-
-        foreach ($partsRoute as $p => $part) {
-            if ($part[0] != ":") {
-                if($part != $partsURL[$p]){
-                    return false;
-                } else {
-                    $this->params[$part] = $partsURL[$p];
-                }
-            }
+        foreach ($partsRoute as $key => $part) {
+            if($part[0] != ":"){
+                if($part != $partsURL[$key])
+                return false;
+            } else {
+            $this->params[$part] = $partsURL[$key];
+        }
         }
         return true;
     }
