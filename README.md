@@ -30,8 +30,18 @@ Esta API proporciona funcionalidades para administrar productos de una tienda de
 #### Crear Producto
 - **Descripción**: Crea un nuevo producto.
 - **Método**: POST
-- **Endpoint**: `http://localhost/tp2-apirest/api/products`
+- **Endpoint**: `http://localhost/TPE-WEB2-API/api/productos`
 - **Body (JSON)**: 
+    ```json
+    {
+        "id_categoria": "numero de categoria",
+        "tipo": "tipo de prenda",
+        "talle": "tamaño de la prenda",
+        "precio": "precio de la prenda"
+    }
+    ```
+
+    - Ejemplos:
     ```json
     {
         "id_categoria": 6,
