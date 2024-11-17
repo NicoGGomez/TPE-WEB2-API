@@ -17,3 +17,29 @@ Esta API proporciona funcionalidades para administrar productos de una tienda de
 - **Descripción**: Obtiene un producto por su ID.
 - **Método**: GET
 - **Endpoint**: `http://localhost/TPE-WEB2-API/api/productos/{id}`
+
+#### Ordenar Productos
+- **Descripción**: Obtiene productos ordenados por columna y dirección.
+- **Método**: GET
+- **Endpoint**: `http://localhost/TPE-WEB2-API/api/productos/?sortby={columna}&order={ASC o DESC}`
+    - Ejemplos:
+        - `http://localhost/tp2-apirest/api/products/?sortby=id_producto&order=DESC`
+        - `http://localhost/tp2-apirest/api/products/?sortby=precio&order=ASC`
+        - `http://localhost/tp2-apirest/api/products/?sortby=tipo&order=DESC`
+
+#### Crear Producto
+- **Descripción**: Crea un nuevo producto.
+- **Método**: POST
+- **Endpoint**: `http://localhost/tp2-apirest/api/products`
+- **Body (JSON)**: 
+    ```json
+    {
+        "id_categoria": 6,
+        "tipo": "remera",
+        "talle": "XL",
+        "precio": 3000
+    }
+    ```
+
+
+

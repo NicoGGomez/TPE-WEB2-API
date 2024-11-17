@@ -28,4 +28,10 @@ class productModel {
         return $producto;
     }
 
+    function agregarProducto($id_categoria, $tipo, $talle, $precio){
+        $query = $this->db->prepare("INSERT INTO producto (id_categoria, tipo, talle, precio) VALUES ( ?, ?, ?, ?)");
+        $query->execute([$id_categoria, $tipo, $talle, $precio]);
+        return $this->db->lastInsertId();
+    }
+
 }
