@@ -54,5 +54,16 @@ class productController {
             $this->viewApi->response("el producto se agrego correctamente", 201);
         }
     }
+    function editarProducto($params = null){
+        $id_producto = $params[':id'];
+        $producto = $this->productModel->productoById($id_producto);
+        if($producto){
+            $producto = $this->getData();
+            $this->productModel->editarProducto($producto->id_categoria,$producto->tipo,$producto->talle,$producto->precio, $id_producto);
+            $this->viewApi->response("se edito el producto " . $id_producto . " correctamente", 200);
+        } else {
+            $this->viewApi->response("el producto no existe", 404);
+        }
+    }
 
 }

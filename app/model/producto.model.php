@@ -34,4 +34,9 @@ class productModel {
         return $this->db->lastInsertId();
     }
 
+    function editarProducto($id_categoria, $tipo, $talle, $precio, $id_producto){
+        $query = $this->db->prepare("UPDATE producto SET id_categoria=?, tipo=?, talle=?, precio=? WHERE id_producto=?");
+        $query->execute([$id_categoria, $tipo, $talle, $precio, $id_producto]);
+    }
+
 }

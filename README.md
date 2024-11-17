@@ -41,15 +41,16 @@ Esta API proporciona funcionalidades para administrar productos de una tienda de
     }
     ```
 
-    - Ejemplos:
+#### Actualizar Producto
+- **Descripción**: Actualiza un producto por su ID.
+- **Método**: PUT
+- **Endpoint**: `http://localhost/TPE-WEB2-API/api/productos/{id}`
+- **Body (JSON)**: 
     ```json
     {
-        "id_categoria": 6,
-        "tipo": "remera",
-        "talle": "XL",
-        "precio": 3000
+        "id_categoria": "numero de categoria",
+        "tipo": "tipo de prenda",
+        "talle": "tamaño de la prenda",
+        "precio": "precio de la prenda"
     }
     ```
-
-
-
