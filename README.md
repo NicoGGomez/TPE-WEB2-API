@@ -23,9 +23,9 @@ Esta API proporciona funcionalidades para administrar productos de una tienda de
 - **Método**: GET
 - **Endpoint**: `http://localhost/TPE-WEB2-API/api/productos/?sortby={columna}&order={ASC o DESC}`
     - Ejemplos:
-        - `http://localhost/TPE-WEB2-API/api/products/?sortby=id_producto&order=DESC`
-        - `http://localhost/TPE-WEB2-API/api/products/?sortby=precio&order=ASC`
-        - `http://localhost/TPE-WEB2-API/api/products/?sortby=tipo&order=DESC`
+        - `http://localhost/TPE-WEB2-API/api/productos/?sortby=id_producto&order=DESC`
+        - `http://localhost/TPE-WEB2-API/api/productos/?sortby=precio&order=ASC`
+        - `http://localhost/TPE-WEB2-API/api/productos/?sortby=tipo&order=DESC`
 
 #### Crear Producto
 - **Descripción**: Crea un nuevo producto.
